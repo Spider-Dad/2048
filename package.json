@@ -1,0 +1,19 @@
+{
+  "name": "game-2048",
+  "version": "1.0.0",
+  "description": "Игра 2048",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s ."
+  },
+  "keywords": [
+    "game",
+    "2048",
+    "browser-game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 
