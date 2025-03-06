@@ -1,3 +1,19 @@
+// Глобальный обработчик для предотвращения скроллинга при свайпах в игре
+document.addEventListener('DOMContentLoaded', function() {
+    const gameContainer = document.querySelector('.game-container');
+    const gridContainer = document.querySelector('.grid-container');
+    
+    // Предотвращаем скроллинг на игровом поле
+    function preventScroll(e) {
+        if (e.target.closest('.grid-container') || e.target.closest('.game-container')) {
+            e.preventDefault();
+        }
+    }
+    
+    // Добавляем обработчики для всех сенсорных событий
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+});
+
 // Массив цитат
 const quotes = [
     {
@@ -169,13 +185,19 @@ class Game2048 {
         gridContainer.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
             touchStartY = e.changedTouches[0].screenY;
-        }, false);
+            e.preventDefault(); // Предотвращаем стандартное поведение браузера
+        }, { passive: false });
+        
+        gridContainer.addEventListener('touchmove', (e) => {
+            e.preventDefault(); // Предотвращаем скроллинг при движении пальца
+        }, { passive: false });
         
         gridContainer.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
             touchEndY = e.changedTouches[0].screenY;
             this.handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
-        }, false);
+            e.preventDefault(); // Предотвращаем стандартное поведение браузера
+        }, { passive: false });
     }
     
     // Определение направления свайпа
