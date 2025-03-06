@@ -1,14 +1,16 @@
 {
-  "name": "game-2048",
+  "name": "spring-2048",
   "version": "1.0.0",
-  "description": "Игра 2048",
+  "description": "Игра 2048 в весеннем стиле",
   "main": "index.html",
   "scripts": {
-    "start": "serve -s ."
+    "start": "serve -s .",
+    "build": "node build.js"
   },
   "keywords": [
     "game",
     "2048",
+    "spring",
     "browser-game"
   ],
   "author": "",

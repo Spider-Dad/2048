@@ -1,8 +1,5 @@
-meta:
-  environment: node
-  toolchain:
-    name: browser
-    version: 18
+name: spring-2048
+env: nodejs-browser
 build:
   artifacts:
-    build/*: /
+    "build/*": "/"

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Оптимизируй <span class="accent marker">2048</span> процессов!</h1>
+        </div>
+        
+        <div class="content-container">
+            <div class="quote-container">
+                <div class="quote-text" id="quote-text">
+                    «Наша работа напоминает тетрис: кажется, всё падает на голову, но мы всегда находим, как это сложить в идеальную картинку»
+                </div>
+                <div class="quote-author" id="quote-author">
+                    <span class="marker">Паша Швыдкин</span> ©
+                </div>
+            </div>
+            
+            <div class="game-container">
+                <div class="grid-container">
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls-container">
+                <div class="score-container">
+                    <div>Счёт: <span id="score">0</span></div>
+                    <div>Рекорд: <span id="best-score">0</span></div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="new-game">Новая игра</button>
+                    <button id="rules-btn">Правила игры</button>
+                    <button id="undo-btn">Отменить ход</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Правила игры</h2>
+            <p>Используйте стрелки на клавиатуре для перемещения плиток:</p>
+            <ul>
+                <li>↑ - вверх</li>
+                <li>↓ - вниз</li>
+                <li>← - влево</li>
+                <li>→ - вправо</li>
+            </ul>
+            <p>На мобильных устройствах используйте свайпы в нужном направлении.</p>
+            <p>Когда две плитки с одинаковыми числами соприкасаются, они объединяются в одну!</p>
+            <p>Цель игры - получить плитку со значением 2048.</p>
+        </div>
+    </div>
+    
+    <div id="win-modal" class="modal game-notification">
+        <div class="modal-content win-content">
+            <span class="close">&times;</span>
+            <h2>Ура! Ты оптимизировал <span class="marker">2048</span> процессов!</h2>
+            <p>Ты можешь продолжить дальше. Мы в тебя верим!</p>
+            <div class="modal-buttons">
+                <button id="continue-btn">Продолжить</button>
+                <button id="new-game-win">Новая игра</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game-over-modal" class="modal game-notification">
+        <div class="modal-content game-over-content">
+            <span class="close">&times;</span>
+            <h2>Игра окончена!</h2>
+            <p>Твой счёт: <span id="final-score" class="marker">0</span></p>
+            <div class="modal-buttons">
+                <button id="new-game-over">Новая игра</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html> 
