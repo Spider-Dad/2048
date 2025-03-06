@@ -1,5 +1,13 @@
 name: spring-2048
-env: nodejs-browser
-build:
-  artifacts:
-    "build/*": "/"
+env: static
+static:
+  dir: .
+  exclude:
+    - temp/
+    - .git/
+    - .gitignore
+    - amvera.yaml
+    - README.md
+    - LICENSE
+    - build.js
+    - build/
