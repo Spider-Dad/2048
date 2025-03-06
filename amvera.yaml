@@ -1,13 +1,12 @@
-name: spring-2048
-env: static
-static:
-  dir: .
-  exclude:
-    - temp/
-    - .git/
-    - .gitignore
-    - amvera.yaml
-    - README.md
-    - LICENSE
-    - build.js
-    - build/
+---
+version: null
+meta:
+  environment: node
+  toolchain:
+    name: browser
+    version: 18
+build:
+  additionalCommands: null
+  artifacts:
+    build/*: /
+run: {}
