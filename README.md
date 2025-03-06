@@ -30,7 +30,7 @@ cd 2048
 
 ## Демо
 
-Игра доступна онлайн по адресу: [https://yourusername.github.io/2048](https://yourusername.github.io/2048)
+Игра доступна онлайн по адресу: [https://2048-spiderdad.amvera.io/](https://2048-spiderdad.amvera.io/)
 
 ## Лицензия
 
