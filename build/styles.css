@@ -102,6 +102,9 @@ body {
     width: 45%;
     display: flex;
     justify-content: center;
+    touch-action: none;
+    overflow: hidden;
+    position: relative;
 }
 
 .grid-container {
