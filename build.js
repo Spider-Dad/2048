@@ -58,7 +58,7 @@ try {
     }
 
     // Файлы для копирования
-    const filesToCopy = ['index.html', 'styles.css', 'game.js', 'package.json', '.npmrc', '.nvmrc', 'Procfile'];
+    const filesToCopy = ['index.html', 'styles.css', 'game.js', 'package.json', '.npmrc', '.nvmrc', 'Procfile', 'og_image.jpg'];
     console.log(`Files to copy: ${filesToCopy.join(', ')}`);
 
     // Копируем отдельные файлы
