@@ -194,6 +194,15 @@ button:active {
     box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
+/* Стили для кнопки "Выход" в Telegram */
+#exit-btn {
+    background: #e74c3c;
+}
+
+#exit-btn:hover {
+    background: #c0392b;
+}
+
 .grid-row {
     display: flex;
     gap: 10px;

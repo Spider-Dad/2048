@@ -1,3 +1,30 @@
+// Проверка на запуск внутри Telegram
+let isTelegramWebApp = false;
+let tgWebApp = null;
+
+// Инициализация Telegram Web App API
+document.addEventListener('DOMContentLoaded', function() {
+    // Проверяем, запущено ли приложение внутри Telegram
+    if (window.Telegram && window.Telegram.WebApp) {
+        isTelegramWebApp = true;
+        tgWebApp = window.Telegram.WebApp;
+        
+        // Инициализируем Telegram Web App
+        tgWebApp.expand(); // Расширяем приложение на весь экран
+        
+        // Добавляем кнопку "Выход" для Telegram
+        const controlsContainer = document.querySelector('.buttons');
+        const exitButton = document.createElement('button');
+        exitButton.id = 'exit-btn';
+        exitButton.textContent = 'Выход';
+        exitButton.addEventListener('click', () => {
+            // Закрываем мини-приложение Telegram
+            tgWebApp.close();
+        });
+        controlsContainer.appendChild(exitButton);
+    }
+});
+
 // Глобальный обработчик для предотвращения скроллинга при свайпах в игре
 document.addEventListener('DOMContentLoaded', function() {
     const gameContainer = document.querySelector('.game-container');
@@ -463,5 +490,8 @@ class Game2048 {
     }
 }
 
-// Запуск игры
-new Game2048(); 
+// Инициализация игры
+document.addEventListener('DOMContentLoaded', () => {
+    // Создаем экземпляр игры
+    const game = new Game2048();
+}); 
